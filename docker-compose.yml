@@ -26,6 +26,7 @@ services:
       discovery.type: single-node
     ports:
       - "9200:9200"
+      - "9300:9300"
     networks:
       - postgres
 
@@ -43,9 +44,9 @@ services:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/postgres
       - SPRING_DATASOURCE_USERNAME=postgres
       - SPRING_DATASOURCE_PASSWORD=1234
-      - SPRING_JPA_PROPERTIES_HIBERNATE_SEARCH_BACKEND_HOSTS=localhost:9200
+      - SPRING_JPA_PROPERTIES_HIBERNATE_SEARCH_BACKEND_HOSTS=elasticsearch:9200
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
-#      - ES_URL=elasticsearch:9200
+      - ES_URL=elasticsearch:9200
 
 #  front:
 #    container_name: shop-client
