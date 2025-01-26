@@ -43,9 +43,9 @@ services:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/postgres
       - SPRING_DATASOURCE_USERNAME=postgres
       - SPRING_DATASOURCE_PASSWORD=1234
-      - SPRING_JPA_PROPERTIES_HIBERNATE_SEARCH_BACKEND_HOSTS=http://elasticsearch:9200
+      - SPRING_JPA_PROPERTIES_HIBERNATE_SEARCH_BACKEND_HOSTS=localhost:9200
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
-      - ES_URL=elasticsearch:9200
+#      - ES_URL=elasticsearch:9200
 
 #  front:
 #    container_name: shop-client
